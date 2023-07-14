@@ -10,16 +10,21 @@ class Producto{
 
 
     // Constructor es una funcion que se va a llamar de inmediato una vez que se crea una nueva instancia
-    public function __construct(public string $nombre, public int $precio, public bool $disponible)
+    public function __construct(public string $nombre, public int $precio, public bool $disponible) // definir atributos
     {
         //$this->nombre = $nombre;  // this se refiere al objeto que estas creando
         //$this->precio = $precio; 
         //$this->disponible = $disponible; 
     }
+
+    public function mostrarProducto(){ // definir  metodo
+        echo "El producto es: " . $this->nombre . " y su precio es: " . $this->precio; 
+    }
 }
 
 // Crear instancias agregando algunos valores
 $producto = new Producto('tablet', 200, true);
+$producto->mostrarProducto();  // un objeto utiliza la sintasis de flecha
 
 
 echo "<pre>";
