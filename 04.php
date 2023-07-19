@@ -1,6 +1,6 @@
 <?php include 'includes/header.php';
 
-class Transporte{
+abstract class Transporte{ // CLASE DISEÑADA PARA SER HEREDADA POR OTROS CLASES
     public function __construct(protected int $ruedas, protected int $capacidad)        
     {   
         
@@ -29,6 +29,9 @@ class Automovil extends Transporte{
         return $this->transmision;
     }
 }
+
+
+
 
 $auto = new Automovil(4, 4, 'Manual'); 
 $bicicleta = new Bicicleta(2, 1);
