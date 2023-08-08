@@ -1,4 +1,6 @@
-<?php include 'includes/header.php';
+<?php
+
+include 'includes/header.php';
 
 // Crear nueva instancia para conectar a la BD con msqli
 $db = new mysqli('localhost', 'root', 'root', 'bienesraices_crud');
